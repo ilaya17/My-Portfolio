@@ -1,5 +1,5 @@
-import React from 'react'
-import resume from '../../assets/ilayacv.pdf';
+import React from 'react';
+import resume from '../../assets/ilayabharathi.pdf'
 
 const headerButton = () => {
     return (
