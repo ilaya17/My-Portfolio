@@ -1,43 +1,27 @@
-import React from 'react'
-import './works.css'
-import CALCULATOR from '../../assets/calc.jpg'
-import Demo1 from '../../assets/demo-1.jpg'
-import Demo2 from '../../assets/demo-2.jpg'
-import Demo3 from '../../assets/demo-3.jpg'
-import Demo4 from '../../assets/demo-4.jpg'
+import React from 'react';
+import './works.css';
+import CALCULATOR from '../../assets/calc.jpg';
+import SMS from '../../assets/Student Management.jpeg';
+import Demo2 from '../../assets/demo-2.jpg';
 
 const data = [
   {
     id: 1,
     image: CALCULATOR,
     title: 'This Is Calculator',
-    github: 'http://github.com',
-    launch: 'http://google.com',
+    github: 'https://github.com/ilaya17/day-15',
+    launch: 'https://resonant-zabaione-4bdaa3.netlify.app/',
   },
   {
     id: 2,
-    image: Demo1,
-    title: 'Demo',
-    github: 'http://github.com',
-    launch: 'http://google.com',
+    image: SMS,
+    title: 'Student Details Management',
+    github: 'https://github.com/ilaya17/crud-app',
+    launch: 'https://rad-gumption-1ec19e.netlify.app/',
   },
-{
+  {
     id: 3,
     image: Demo2,
-    title: 'Demo',
-    github: 'http://github.com',
-    launch: 'http://google.com',
-  },
-  {
-    id: 4,
-    image: Demo3,
-    title: 'Demo',
-    github: 'http://github.com',
-    launch: 'http://google.com',
-  },
-  {
-    id: 5,
-    image: Demo4,
     title: 'Demo',
     github: 'http://github.com',
     launch: 'http://google.com',
@@ -51,18 +35,18 @@ const works = () => {
       <h2>Projects</h2>
       <div className='container works_container'>
         {
-          data.map(({id, image, title, github, launch}) =>{
-            return(
+          data.map(({ id, image, title, github, launch }) => {
+            return (
               <article className='works_item'>
-              <div key= {id} className='works_item-img'>
-                <img src={image} alt={title} />
-              </div>
-              <h3>{title}</h3>
-              <div className='works_item-buttons'>
-                <a href={github} className='btn'>Github</a>
-                <a href={launch} target='_blank' className='btn btn-primary'>Launch</a>
-              </div>
-            </article>
+                <div key={id} className='works_item-img'>
+                  <img src={image} alt={title} />
+                </div>
+                <h3>{title}</h3>
+                <div className='works_item-buttons'>
+                  <a href={github} className='btn'>Github</a>
+                  <a href={launch} target='_blank' className='btn btn-primary'>Launch</a>
+                </div>
+              </article>
             )
           })
         }
